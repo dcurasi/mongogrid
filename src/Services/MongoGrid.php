@@ -61,7 +61,8 @@ class MongoGrid implements MongoGridFactory {
         $this->setBucket( $prefix ); // select bucket with prefix
 
         $this->storage     = Storage::disk($this->config['storage']);
-        $this->path_prefix = $this->storage->getAdapter()->getPathPrefix();
+        //$this->path_prefix = $this->storage->getAdapter()->getPathPrefix();
+        $this->path_prefix = $this->storage->path('')
 
         return $this;
     }
